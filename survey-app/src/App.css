@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+.survey-title {
+  text-align: left;
+  margin: 40px;
+  padding: 30px;
+}
+
+.question-li {
+  padding: 10px;
+}

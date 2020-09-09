@@ -7,14 +7,19 @@ const surveyURL = 'http://localhost:3000/surveys'
 
 function App() {
 
-  const [surveys, setSurveys] = useState({})
+  const [surveys, setSurveys] = useState([])
 
-  useEffect(() => 
-      fetch(surveyURL)
-        .then(response => response.json())
-        .then(surveys => setSurveys(surveys))
-        // .then(({surveys}) => console.log(surveys))
-  , []) 
+  useEffect(() => {
+
+    async function fetchData() {
+      let promise = await fetch(surveyURL)
+      let surveyData = await promise.json()
+      console.log('fetch data', surveyData)
+      setSurveys(surveyData)
+    }
+    fetchData()
+  }, []
+  )
   
   
   
