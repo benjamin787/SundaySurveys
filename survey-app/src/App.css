@@ -11,3 +11,7 @@
 .question-li {
   padding: 10px;
 }
+
+.survey-card {
+  border-style: dotted;
+}

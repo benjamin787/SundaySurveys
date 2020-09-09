@@ -1,5 +1,5 @@
 import React from 'react'
-import { useForm } from 'react-hook-forms'
+import { useForm } from 'react-hook-form'
 
 const responseURL = 'http://localhost:3000/question_responses'
 
@@ -18,7 +18,8 @@ function SurveyPage({ survey }) {
         })
     }
 
-    const submitAnswers = async () => {
+    const submitAnswers = async (event) => {
+        event.preventDefault()
         const answers = getValue()
         const promise = await fetch(responseURL, {
             method: 'POST',
@@ -26,9 +27,11 @@ function SurveyPage({ survey }) {
             body: JSON.stringify(answers)
         })
         const confirmation = await promise.json()
-        // bubble appears either confirming/thanking or telling to fix something
-
-
+        const buttonResponse = confirmation
+            ? 'Thanks for your submission!'
+            : 'Please check that all questions have been answered.'
+        return <button>{buttonResponse}</button>
+        // add onclick redirect or link somehow? 
     }
     
     return (
