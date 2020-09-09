@@ -1,5 +1,7 @@
 import React from 'react'
 
+import SurveyPage from './SurveyPage'
+
 export default function SurveyCard({ survey }) {
 
     const check = () => {
@@ -8,15 +10,14 @@ export default function SurveyCard({ survey }) {
     }
     check()
 
+    const openSurvey = (event) => {
+        return <SurveyPage survey={survey} key={survey.id} />
+    }
+
     return (
-        <div>
+        <div onClick={openSurvey()}>
             {/* maybe an icon on left side of card? */}
             <h2 className='survey-title'>{survey.title}</h2>
-            <ol className='questions-list'>
-                {survey.survey_questions.map(question => {
-                    return <li className='question-li' key={question.id}>{question.content}</li>
-                })}
-            </ol>
         </div>
     )
 }
