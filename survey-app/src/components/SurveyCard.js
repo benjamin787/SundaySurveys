@@ -1,19 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import AssessmentIcon from '@material-ui/icons/Assessment'
+
 
 import SurveyPage from './SurveyPage'
 
-export default function SurveyCard({ survey }) {
+export default function SurveyCard({ survey, setOpenSurvey }) {
 
-
-    const openSurvey = () => {
+    const takeSurvey = () => {
         console.log('clicked')
-        return <SurveyPage survey={survey} key={survey.id} />
+        setOpenSurvey(survey)
+        // return <SurveyPage survey={survey} key={survey.id} />
     }
 
+
+
     return (
-        <div onClick={openSurvey} className='survey-card'>
-            {/* maybe an icon on left side of card? */}
-            <h2 className='survey-title'>{survey.title}</h2>
+        <div onClick={takeSurvey} className='survey-card'>
+            <aside>
+                <img src={AssessmentIcon} alt='Survey' />
+            </aside>
+            <Link to={`/surveys/${survey.id}`} >
+                <button className='survey-title'>{survey.title}</button>
+            </Link>
         </div>
     )
 }

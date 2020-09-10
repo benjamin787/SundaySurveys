@@ -15,3 +15,7 @@
 .survey-card {
   border-style: dotted;
 }
+
+button {
+  padding: 30px;
+}
