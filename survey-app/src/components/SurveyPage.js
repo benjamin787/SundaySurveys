@@ -32,24 +32,13 @@ function SurveyPage({ openSurvey, setOpenSurvey, routerProps }) {
     }
     
     const survey = new Survey.Model(makeJSON())
-
-    console.log('survey', survey)
-
-    // const collectAnswers = () => {
-    //     let answerStorage = []
-    //     survey_questions.forEach(question => {
-    //         answerStorage.push(question.id: survey.getValue(question.id))
-    //     })
-    //     return answerStorage
-    // }
     
     const submitAnswers = (form, event) => {
-        event.preventDefault()
-
+        console.log(form)
         fetch(responseURL, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            // body: JSON.stringify(collectAnswers())
+            body: JSON.stringify(form)
         })
         setOpenSurvey({})
     }
@@ -66,16 +55,13 @@ function SurveyPage({ openSurvey, setOpenSurvey, routerProps }) {
             />
         )
     }
-
-    console.log(displaySurvey())
     
     return (
-        <div>
+        <div className='background-card'>
             { openSurvey === {}
                 ? routerProps.history.push('/')
                 : displaySurvey()
             }
-            <br/>
             <Link to='/'><button>Cancel</button></Link>
         </div>
     )

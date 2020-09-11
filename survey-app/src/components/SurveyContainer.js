@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'survey-react'
 
 import SurveyCard from './SurveyCard'
 
@@ -9,8 +10,9 @@ export default function SurveyContainer({ surveys, setOpenSurvey }) {
     })
 
     return (
-        <div className='survey-container'>
+        <div className='background-card'>
             {displaySurveyCards()}
+            <Link to='/'><button>Cancel</button></Link>
         </div>
     )
 }

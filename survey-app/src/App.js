@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
-import Container from '@material-ui/core/Container'
-
 
 import SurveyContainer from './components/SurveyContainer'
 import Home from './components/Home'
 import SurveyPage from './components/SurveyPage'
+import CreatePage from './components/CreatePage'
 
 const surveyURL = 'http://localhost:3000/surveys'
 
@@ -26,6 +25,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className='background-card'>
+        <br />
+        <br />
         <h1>Sunday with the Firooz's</h1>
         <Switch>
           <Route exact path='/' component={Home} />
@@ -47,7 +49,12 @@ function App() {
               {...routerProps}
               />}
           />
+          <Route
+            path='/createSurvey'
+            render={routerProps => <CreatePage {...routerProps} />}
+          />
         </Switch>
+      </div>
     </div>
   );
 }
