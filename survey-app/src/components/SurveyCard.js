@@ -17,10 +17,8 @@ export default function SurveyCard({ survey, setOpenSurvey }) {
 
     return (
         <div onClick={takeSurvey} className='survey-card'>
-            <aside>
-                <img src={AssessmentIcon} alt='Survey' />
-            </aside>
             <Link to={`/surveys/${survey.id}`} >
+                <AssessmentIcon />
                 <button className='survey-title'>{survey.title}</button>
             </Link>
         </div>

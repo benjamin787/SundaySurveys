@@ -23,11 +23,9 @@ function App() {
     }
     fetchData()
   }, [])
-  
 
   return (
     <div className="App">
-      <Container maxWidth='sm'>
         <h1>Sunday with the Firooz's</h1>
         <Switch>
           <Route exact path='/' component={Home} />
@@ -43,13 +41,13 @@ function App() {
           <Route
             path={`/surveys/${openSurvey.id}`}
             render={routerProps => <SurveyPage
+              surveys={surveys}
               openSurvey={openSurvey}
+              setOpenSurvey={setOpenSurvey}
+              {...routerProps}
               />}
-              />
-          {/* <SurveyContainer surveys={surveys} /> */}
-          {/* redirect back to home, with error message - like 'survey already completed' */}
+          />
         </Switch>
-      </Container>
     </div>
   );
 }

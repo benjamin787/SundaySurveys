@@ -4,10 +4,17 @@ import AddBox from '@material-ui/icons/AddBox'
 import Assignment from '@material-ui/icons/Assignment'
 import PieChart from '@material-ui/icons/PieChart'
 
+
+import * as Survey from 'survey-react'
+import 'survey-react/survey.css'
+
+
 function Home() {
+
+
+
     return (
         <div>
-            {/* link to create surveys */}
             <Link to=''>
                 <AddBox color='primary' />
                 {/* <img src={AddBox} alt='Create Survey' /> */}
