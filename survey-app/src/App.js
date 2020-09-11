@@ -26,9 +26,7 @@ function App() {
   return (
     <div className="App">
       <div className='background-card'>
-        <br />
-        <br />
-        <h1>Sunday with the Firooz's</h1>
+        <header><h1>Sunday with the Firooz's</h1></header>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route 
@@ -50,7 +48,7 @@ function App() {
               />}
           />
           <Route
-            path='/createSurvey'
+            path={'/createSurvey'}
             render={routerProps => <CreatePage {...routerProps} />}
           />
         </Switch>

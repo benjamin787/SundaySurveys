@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'survey-react'
+import { Link } from 'react-router-dom'
 
 import SurveyCard from './SurveyCard'
 
@@ -12,7 +12,7 @@ export default function SurveyContainer({ surveys, setOpenSurvey }) {
     return (
         <div className='background-card'>
             {displaySurveyCards()}
-            <Link to='/'><button>Cancel</button></Link>
+            <Link to='/' ><button>Cancel</button></Link>
         </div>
     )
 }
