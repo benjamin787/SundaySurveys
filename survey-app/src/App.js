@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
-
 import SurveyContainer from './components/SurveyContainer'
 import Home from './components/Home'
 import SurveyPage from './components/SurveyPage'
@@ -26,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <div className='background-card'>
-        <header><h1>Sunday with the Firooz's</h1></header>
+        <header><h1>Sunday Surveys</h1></header>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route 

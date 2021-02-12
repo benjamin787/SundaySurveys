@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import * as Survey from 'survey-react'
 import 'survey-react/survey.css'
@@ -8,7 +8,6 @@ const responseURL = 'http://localhost:3000/question_responses'
 function SurveyPage({ openSurvey, setOpenSurvey, routerProps }) {
 
     const { survey_questions } = openSurvey
-
 
     const makeQuestions = () => {
         return survey_questions.map(question => {

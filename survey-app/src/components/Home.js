@@ -4,15 +4,10 @@ import AddBox from '@material-ui/icons/AddBox'
 import Assignment from '@material-ui/icons/Assignment'
 import PieChart from '@material-ui/icons/PieChart'
 
-
-import * as Survey from 'survey-react'
 import 'survey-react/survey.css'
 
 
 function Home() {
-
-
-
     return (
         <div className='background-card'>
             <Link to='/createSurvey' className='home-buttons'>

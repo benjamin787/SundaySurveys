@@ -29,7 +29,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-flow: ; */
 }
 
 .home-buttons {
@@ -53,7 +52,6 @@
   background-size: contain;
   background-position: center;
   display: block;
-  /* height: 100%; */
   background-image: url(https://toppng.com/uploads/preview/clipboard-png-11553939508chepwkyjln.png);
   object-fit: contain;
 }
