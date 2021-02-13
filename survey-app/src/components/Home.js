@@ -9,7 +9,7 @@ import 'survey-react/survey.css'
 
 function Home() {
     return (
-        <div className='background-card'>
+        <div className='link-list' >
             <Link to='/createSurvey' className='home-buttons'>
                 <AddBox color='primary' fontSize='large' />
                 <h2 className='home-label'>Bug your friends<br></br>with endless questions!</h2>
