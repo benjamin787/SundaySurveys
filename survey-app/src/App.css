@@ -1,3 +1,8 @@
+header {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 .survey-title {
   text-align: left;
   margin: 40px;
@@ -39,21 +44,15 @@
 }
 
 .background-card {
-  /* position: fixed; */
   text-align: center;
-  /* display: flex; */
   flex-flow: column;
-  /* object-fit: contain; */
   background-image: url(https://toppng.com/uploads/preview/clipboard-png-11553939508chepwkyjln.png);
-  background-position: center -5%;
+  background-position: 76% 3%;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   z-index: 1;
-  background-size: 1000px 1100px;
+  background-size: 1000px 600px;
 }
 
 body {
   background-image: url('./assets/greyCheckers.png');
-  /* object-fit: contain; */
-  /* background-size: auto; */
 }
