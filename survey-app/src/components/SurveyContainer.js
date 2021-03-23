@@ -9,7 +9,7 @@ export default function SurveyContainer({ surveys, setOpenSurvey }) {
     })
 
     return (
-        <div className='background-card'>
+        <div>
             {displaySurveyCards()}
             <Link to='/' ><button>Cancel</button></Link>
         </div>

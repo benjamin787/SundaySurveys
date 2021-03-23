@@ -56,7 +56,7 @@ function SurveyPage({ openSurvey, setOpenSurvey, routerProps }) {
     }
     
     return (
-        <div className='background-card'>
+        <div>
             { openSurvey === {}
                 ? routerProps.history.push('/')
                 : displaySurvey()

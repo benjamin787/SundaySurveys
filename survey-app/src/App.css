@@ -1,6 +1,7 @@
 header {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  /* margin-bottom: 5px; */
+  padding-top: 2px;
 }
 
 .survey-title {
@@ -23,7 +24,6 @@ header {
   display: inline-block;
   max-width: 75%;
   margin: 4em;
-
 }
 
 .create-inputs {
@@ -49,15 +49,19 @@ header {
 }
 
 .background-card {
+  margin-right: 90px;
   text-align: center;
   flex-flow: column;
   background-image: url(https://toppng.com/uploads/preview/clipboard-png-11553939508chepwkyjln.png);
-  background-position: 76% 3%;
+  background-position: 84% 2%;
   background-repeat: no-repeat;
   z-index: 1;
-  background-size: 1000px 600px;
+  background-size: 1000px 650px;
+  height: 900px;
 }
 
 body {
   background-image: url('./assets/greyCheckers.png');
+  width: initial;
+  background-size: cover;
 }
